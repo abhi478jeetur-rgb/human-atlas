@@ -101,5 +101,16 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .search-system-filters button{font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid #18253614;color:#677583;white-space:nowrap;height:26px;min-height:26px}
 .search-system-filters button.active{background:#263b48;color:#fff;border-color:#263b48}
 
+.region-selector{position:absolute;bottom:120px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:4px;border-radius:10px;z-index:10}
+.region-selector button{font-size:11px;font-weight:500;padding:5px 10px;height:28px;min-height:28px;border-radius:7px;color:#60707f;transition:all .15s}
+.region-selector button:hover{color:#202e3b;background:#1825360c}
+.region-selector button.active{background:#263b48;color:#fff;box-shadow:0 1px 3px #18253615}
+@media(max-width:767px){
+ .region-selector{bottom:calc(105px + env(safe-area-inset-bottom));max-width:calc(100% - 24px);overflow-x:auto;scrollbar-width:none}
+ .region-selector::-webkit-scrollbar{display:none}
+ .region-selector button{font-size:10px;padding:4px 8px;height:26px;min-height:26px}
+}
+
+
 
 
