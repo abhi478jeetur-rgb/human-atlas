@@ -8,12 +8,17 @@ Repository: [abhi478jeetur-rgb/human-atlas](https://github.com/abhi478jeetur-rgb
 
 ## Explore
 
-- Orbit, zoom, and select structures directly on the body.
-- Toggle individual systems or use skeleton and organ presets.
-- Move from assembled anatomy to a spaced inventory of every visible piece.
-- Search anatomical names and source identifiers.
-- Isolate a selected structure and read its details.
-- Use compact controls and detail panels on mobile.
+- **Interactive 3D Exploration**: Orbit, zoom, and select structures directly on the body.
+- **Anatomical Body Region Presets**: Quick focus camera on Head, Thorax, Abdomen, Pelvis, or Full Body.
+- **Audio Term Pronunciation**: Natural speech synthesis pronouncing medical & Latin anatomical terms.
+- **System-Filtered Search**: Instant concept discovery with system category pills (Skeletal, Cardiac, Nervous, Digestive, Respiratory, Muscular).
+- **High-Resolution Viewport Snapshots**: One-click clean PNG exports for study, papers, and sharing.
+- **Keyboard Navigation**: Fast keybindings (`/` search, `Space` auto-rotate, `1`–`4` camera angles, `P` capture, `R` reset, `I` isolate, `?` help).
+- **Expanded Medical Explanations**: Authoritative educational context for over 35 major human organs and bones.
+- **Layer Controls**: Toggle individual systems or use skeleton and organ presets.
+- **Exploded View**: Move smoothly from assembled anatomy to a spaced inventory of every visible piece.
+- **Structure Isolation**: Isolate any selected structure and inspect its composition and reference data.
+- **Responsive Layout**: Designed for seamless experience on desktop, tablet, and mobile screens.
 
 ## Run locally
 
