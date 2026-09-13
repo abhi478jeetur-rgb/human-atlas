@@ -8,12 +8,16 @@ Repository: [abhi478jeetur-rgb/human-atlas](https://github.com/abhi478jeetur-rgb
 
 ## Explore
 
+- **Virtual Cadaver Dissection Lab**: Step onto the stainless steel anatomy table in a clinical supine view. Control the **Dissection Layer Peel Slider** (from Intact Skin ➔ Musculature ➔ Visceral Cavities ➔ Neurovascular Networks ➔ Skeletal Core).
+- **Live Nerve Impulse & Reflex Arc Simulation**: Fire animated action potentials (`N` key or "Simulate Nerve Signal" button) that propagate glowing electric waves along peripheral nerves, the spinal cord, and cerebral pathways with comprehensive neurophysiological steps.
+- **Physical Bounding Box Dimensions**: Instant metric calculations ($W \times H \times D$ in cm/mm) for any chosen organ or bone based on real 3D vertex mesh bounds.
+- **Bookmarks & Personal Revision Notes**: Save complex anatomical structures and write personal study revision notes persisted securely in browser `localStorage`.
 - **Interactive 3D Exploration**: Orbit, zoom, and select structures directly on the body.
 - **Anatomical Body Region Presets**: Quick focus camera on Head, Thorax, Abdomen, Pelvis, or Full Body.
 - **Audio Term Pronunciation**: Natural speech synthesis pronouncing medical & Latin anatomical terms.
 - **System-Filtered Search**: Instant concept discovery with system category pills (Skeletal, Cardiac, Nervous, Digestive, Respiratory, Muscular).
-- **High-Resolution Viewport Snapshots**: One-click clean PNG exports for study, papers, and sharing.
-- **Keyboard Navigation**: Fast keybindings (`/` search, `Space` auto-rotate, `1`–`4` camera angles, `P` capture, `R` reset, `I` isolate, `?` help).
+- **High-Resolution Viewport Snapshots**: One-click clean PNG exports for study, papers, and sharing (`P` key).
+- **Keyboard Navigation**: Fast keybindings (`/` search, `Space` auto-rotate, `C` cadaver lab, `N` nerve signal, `B` bookmarks, `1`–`4` camera angles, `P` capture, `R` reset, `I` isolate, `?` help).
 - **Expanded Medical Explanations**: Authoritative educational context for over 35 major human organs and bones.
 - **Layer Controls**: Toggle individual systems or use skeleton and organ presets.
 - **Exploded View**: Move smoothly from assembled anatomy to a spaced inventory of every visible piece.
