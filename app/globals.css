@@ -92,3 +92,8 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .pronounce-btn:hover{background:#1825360f;color:#202e3b}
 .pronounce-btn.speaking{background:#263b48;color:#fff}
 
+.shortcuts-grid{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.shortcut-row{display:flex;align-items:center;gap:16px;font-size:13px;color:#455462}
+.shortcut-row kbd{display:inline-flex;align-items:center;justify-content:center;min-width:28px;padding:3px 8px;font-size:11px;font-weight:600;font-family:inherit;background:#1825360a;border:1px solid #18253620;border-radius:6px;color:#202e3b}
+
+
