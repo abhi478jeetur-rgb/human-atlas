@@ -32,5 +32,35 @@ export const EXPLANATIONS:Record<string,string> = {
  'urinary bladder':'A muscular reservoir in the pelvis that stores urine arriving from the kidneys through the ureters.',
  'trachea':'The main airway connecting the larynx to the bronchi. Its cartilage supports keep the airway open during breathing.',
  'diaphragm':'A broad muscle separating the chest and abdomen. When it contracts, it increases chest volume and helps draw air into the lungs.',
+ 'lung':'Primary organs of respiration located within the thoracic cavity, exchanging oxygen and carbon dioxide between air and bloodstream.',
+ 'left lung':'The two-lobed left lung accommodating the cardiac notch, allowing space for the apex of the heart.',
+ 'right lung':'The three-lobed right lung, larger than the left, facilitating gas exchange across millions of alveoli.',
+ 'kidney':'Essential paired organs that filter waste and excess water from blood, forming urine and balancing electrolytes.',
+ 'left kidney':'Bean-shaped retroperitoneal organ on the left, regulating blood pressure, acid-base homeostasis, and erythropoiesis.',
+ 'right kidney':'Positioned slightly lower than the left due to the liver, purifying systemic blood and maintaining fluid osmolarity.',
+ 'aorta':'The primary and largest arterial trunk of the systemic circuit, originating from the left ventricle and distributing oxygenated blood.',
+ 'thyroid gland':'An endocrine butterfly-shaped gland located at the base of the neck, synthesizing hormones that regulate metabolic rate and protein synthesis.',
+ 'gallbladder':'A small pear-shaped organ nestled beneath the liver that stores and concentrates bile before releasing it into the duodenum for lipid digestion.',
+ 'esophagus':'A muscular canal traversing the posterior mediastinum that conveys food from the pharynx to the stomach via peristaltic waves.',
+ 'larynx':'The cartilaginous organ situated between the pharynx and trachea, housing the vocal cords for phonation and protecting the lower airway.',
+ 'cerebellum':'Located at the posterior base of the brain, coordinating fine voluntary motor control, equilibrium, balance, and spatial orientation.',
+ 'spinal cord':'The elongated cylindrical bundle of nervous tissue extending from the brainstem through the vertebral column, transmitting sensory and motor impulses.',
+ 'adrenal gland':'Endocrine glands perched atop each kidney, producing vital hormones including adrenaline, aldosterone, and cortisol.',
+ 'duodenum':'The first and shortest segment of the small intestine, receiving chyme from the stomach along with bile and pancreatic enzymes for chemical breakdown.',
+ 'femur':'The thigh bone; the longest, strongest, and heaviest tubular bone in the human skeleton, supporting body weight during ambulation.',
+ 'humerus':'The long bone of the upper arm, articulating proximally with the scapula at the glenohumeral joint and distally with the radius and ulna.',
+ 'skull':'The skeletal framework of the head comprising cranial and facial bones that encapsulate the brain and support sensory structures.',
+ 'mandible':'The largest and strongest bone of the human face, forming the lower jaw and holding the lower teeth in place for mastication.',
+ 'patella':'The sesamoid knee cap bone embedded within the quadriceps tendon, providing mechanical leverage and protecting the knee joint.',
+ 'sternum':'The flat breastbone situated centrally in the anterior thoracic wall, anchoring the ribs via costal cartilages.',
+ 'clavicle':'The collarbone acting as a strut between the sternum and scapula, enabling extensive range of shoulder movement.',
 };
-export function explanation(name:string,system:SystemId){return EXPLANATIONS[name.toLowerCase()] ?? SYSTEMS.find(s=>s.id===system)?.description ?? '';}
+export function explanation(name:string,system:SystemId){
+ const lower = name.toLowerCase();
+ if (EXPLANATIONS[lower]) return EXPLANATIONS[lower];
+ for (const [key, desc] of Object.entries(EXPLANATIONS)) {
+  if (lower.includes(key) || key.includes(lower)) return desc;
+ }
+ return SYSTEMS.find(s=>s.id===system)?.description ?? '';
+}
+
