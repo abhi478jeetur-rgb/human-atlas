@@ -21,8 +21,31 @@ export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
 export type View = 'three-quarter'|'front'|'back'|'side';
 export type BodyRegion = 'all'|'head'|'thorax'|'abdomen'|'pelvis';
-export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;region?:BodyRegion;rotate:boolean;reset:number}
+export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;region?:BodyRegion;rotate:boolean;reset:number;cadaverMode?:boolean;dissectionDepth?:number;impulseActive?:boolean}
 export const DEFAULT_VISIBLE:SystemId[] = ['cardiac','sensory','skeletal','muscular','arterial','venous','nervous','respiratory','digestive','urinary','lymphatic','endocrine','reproductive','connective'];
+
+export interface DissectionStage {
+ label: string;
+ depth: number;
+ description: string;
+ systems: SystemId[];
+}
+
+export const DISSECTION_STAGES: DissectionStage[] = [
+ { label: 'Intact Body', depth: 0, description: 'Superficial skin & external landmarks', systems: ['integumentary', 'sensory'] },
+ { label: 'Musculature', depth: 25, description: 'Skeletal muscles & connective fascia', systems: ['muscular', 'connective', 'sensory'] },
+ { label: 'Visceral Cavities', depth: 50, description: 'Thoracic, abdominal & pelvic viscera', systems: ['cardiac', 'respiratory', 'digestive', 'urinary', 'endocrine'] },
+ { label: 'Neurovascular', depth: 75, description: 'Arteries, veins & nervous pathways', systems: ['arterial', 'venous', 'nervous', 'lymphatic', 'cardiac'] },
+ { label: 'Skeletal Core', depth: 100, description: 'Articulated skeleton & spinal axis', systems: ['skeletal', 'nervous'] }
+];
+
+export function getDissectionSystems(depth: number): SystemId[] {
+ if (depth <= 15) return ['integumentary', 'sensory'];
+ if (depth <= 38) return ['muscular', 'connective', 'sensory'];
+ if (depth <= 65) return ['cardiac', 'respiratory', 'digestive', 'urinary', 'endocrine', 'muscular'];
+ if (depth <= 88) return ['cardiac', 'arterial', 'venous', 'nervous', 'respiratory'];
+ return ['skeletal', 'nervous', 'connective'];
+}
 export const EXPLANATIONS:Record<string,string> = {
  'heart':'A muscular pump in the chest. Its right side sends blood to the lungs; its left side sends blood through the systemic circulation.',
  'liver':'A large organ beneath the right side of the diaphragm. It processes absorbed nutrients, produces bile, and synthesizes many proteins carried in the blood.',
