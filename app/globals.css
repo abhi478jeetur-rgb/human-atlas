@@ -111,6 +111,22 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
  .region-selector button{font-size:10px;padding:4px 8px;height:26px;min-height:26px}
 }
 
+.top-actions .bookmark-top-btn{position:relative}
+.top-badge{position:absolute;top:5px;right:5px;background:#263b48;color:#fff;font-size:9px;font-weight:600;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
+.bookmark-list{display:flex;flex-direction:column;gap:10px;margin-top:16px;max-height:calc(100vh - 220px);overflow-y:auto;padding-right:4px}
+.bookmark-card{background:#ffffffb3;border:1px solid #18253614;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;transition:border-color .18s}
+.bookmark-card:hover{border-color:#1825362e}
+.bookmark-header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bookmark-header button{font-size:14px;font-weight:600;text-transform:capitalize;color:#202e3b;padding:0;text-align:left}
+.bookmark-note-input{width:100%;font-size:12px;color:#455462;background:#f5f7f8;border:1px solid #18253610;border-radius:6px;padding:6px 8px;outline:none;font-family:inherit}
+.bookmark-note-input:focus{border-color:#263b4840;background:#fff}
+.bookmark-empty{padding:28px 12px;text-align:center;color:#788694;font-size:13px;line-height:1.6}
+.note-area{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.note-area label{font-size:11px;font-weight:600;letter-spacing:.05em;color:#6d7b88}
+.note-area textarea{width:100%;font-size:13px;color:#2a3844;background:#f6f8f9;border:1px solid #18253618;border-radius:8px;padding:8px 10px;outline:none;font-family:inherit;min-height:60px;resize:vertical}
+.note-area textarea:focus{border-color:#263b48;background:#fff}
+
+
 
 
 
