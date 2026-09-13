@@ -1,6 +1,11 @@
 {
   "name": "anatomy-studio",
   "version": "0.1.0",
+  "author": "Abhijeet Kumar <abhi478jeeur@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhi478jeetur-rgb/human-atlas.git"
+  },
   "private": true,
   "engines": {
     "node": ">=22.13.0"
